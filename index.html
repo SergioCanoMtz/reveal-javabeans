@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>JavaBeans</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- estilos insertados por mi -->
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="icon" href="img/icono.png">
+	</head>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2> <span class="fragment highlight-blue">JavaBeans</span> </h2>
+					<div class="centrado">
+						<div class="espaciado">		
+							<h5>Nombre: Sergio Cano</h5>
+							<h5>Materia: Tecnologías Web</h5>
+							<h5>Responsable: M.T.I. Carlos Manuel Santibañes</h5>
+						</div>
+						<img src="img/escu.png" class="mediano">
+					</div>
+				</section>
+				<section>
+					<section>
+						<h3>¿Qué es JavaBeans?</h3>
+						<p>Es un componente hecho en software que se puede reutilizar
+							y que puede ser manipulado visualmente por una 
+							herramienta de programación en lenguaje Java.
+						</p>
+					</section>
+					<section>
+						<p>Para ello, se define un interfaz para el momento del 
+							diseño (design time) que permite a la herramienta de 
+							programación o IDE, interrogar (query) al componente 
+							y conocer las propiedades (properties) que define y los
+							tipos de sucesos (events) que puede generar en respuesta 
+							diversas acciones
+						</p>
+					</section>	
+				</section>
+				<section>
+					<section>
+						<h3>Características</h3>
+						<p>Introspection: Permite analizar a la herramienta de 
+							programación o IDE como trabaja el bean
+							<br><br> </p>
+							<p class="fragment fade-up">Customization: El programador
+								 puede alterar la apariencia y la conducta del bean.
+							</p>
+					</section>
+					<section>
+						<p>Events: Informa al IDE de los sucesos 
+							que puede generar en respuesta a las acciones del 
+							usuario o del sistema, y también los sucesos que puede
+							 manejar.
+						</p><br>
+						<p class="fragment fade-down">Properties: Permite cambiar los valores de las 
+							propiedades del bean para personalizarlo (customization).
+						</p>
+					</section>
+					<section>
+						<p>Persistence: Se puede guardar el estado de los beans que 
+							han sido personalizados por el programador, cambiando 
+							los valores de sus propiedades.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Reglas que obedece la clase</h3>
+						<p>
+							Debe tener un constructor por defecto (sin argumentos)
+							<br><br>
+							Persistencia, es decir, implementar el interface 
+							Serializable.
+						</p>
+					</section>
+					<section>
+						<p>Instrospection. Los IDE reconocen ciertas pautas de 
+							diseño, nombres de las funciones miembros o métodos y 
+							definiciones de las clases, que permiten a la herramienta
+							 de programación mirar dentro del bean y conocer sus 
+							 propiedades y su conducta.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3> <span class="fragment highlight-blue">Tipos de propiedades</span></h3>
+						<p>Las propiedades de un bean pueden examinarse y modificarse
+							 mediante métodos o funciones miembro, que acceden a dicha 
+							 piedad, y pueden ser de dos tipos:
+						</p>
+					</section>
+					<section>
+						<h3><span class="fragment highlight-red">Getter method</span></h3>
+						<p>Lee en valor de la propiedad</p>
+					</section>
+					<section>
+						<h3><span class="fragment highlight-green">setter method</span></h3>
+						<p>Establece el valor de la propiedad</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			
+			Reveal.initialize({
+				hash: true,
+				transition: 'convex',
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
